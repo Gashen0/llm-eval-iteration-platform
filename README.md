@@ -1,4 +1,11 @@
-# LLM Evaluation & Iteration Platform
+# LLM Evaluation 0026 Iteration Platform
+
+评估驱动开发平台 | Prompt 版本管理 | LLM002das002dJudge + 规则指标 | Streamlit0026nbsp;Dashboard
+
+[![CI](https://github.com/Gashen0/llm-eval-iteration-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/Gashen0/llm-eval-iteration-platform/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Docker](https://img.shields.io/badge/docker-supported-blue?logo=docker)](Dockerfile)
 
 支持 Prompt 版本管理、自动化评估与迭代优化的工程师平台
 
