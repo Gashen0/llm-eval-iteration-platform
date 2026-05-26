@@ -1,0 +1,30 @@
+# 示例 Prompt 版本文件
+# 文件命名规则: {name}_v{version}.yaml
+
+id: sql_generator_v1.0.0
+name: sql_generator
+content: |
+  你是一个 SQL 生成助手。根据用户提供的数据库 schema 和自然语言查询，生成对应的 SQL 语句。
+
+  数据库 Schema:
+  {{schema}}
+
+  用户查询:
+  {{query}}
+
+  要求:
+  1. 仅输出 SQL 语句，不要附加解释
+  2. 使用标准 SQL 语法
+  3. 如果查询无法用 SQL 表达，输出 "UNABLE_TO_GENERATE"
+
+variables:
+  - schema
+  - query
+version: "1.0.0"
+parent_id: null
+created_at: "2024-01-01T00:00:00"
+author: default
+change_motive: "初始版本"
+evaluation_id: null
+metadata: {}
+content_hash: "placeholder"

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: eval-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000
+
+  dashboard:
+    build: .
+    container_name: eval-dashboard
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    command: streamlit run src/dashboard/app.py --server.address=0.0.0.0 --server.port=8501
+
+  # 可选：Redis 用于任务队列（批量评估）
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: eval-redis
+  #   ports:
+  #     - "6379:6379"
